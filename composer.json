@@ -1,0 +1,40 @@
+{
+    "name": "jonas/busca-cursos-alura",
+    "description": "Projeto que busca cursos no site da Alura",
+    "type": "library",
+    "license": "Apache",
+    "autoload": {
+        "psr-4": {
+            "Jonas\\BuscaCursosAlura\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "jonasgaleno",
+            "email": "jonasgaleno116@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.5",
+        "symfony/dom-crawler": "^6.2",
+        "symfony/css-selector": "^6.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9",
+        "squizlabs/php_codesniffer": "^3.7",
+        "phan/phan": "^5.4"
+    },
+    "scripts": {
+        "teste": "phpunit tests/TestBuscadorDeCursos.php",
+        "cs": "phpcs --standard=PSR12 scr/",
+        "phan": "phan --allow-polyfill-parser",
+        "check": [
+            "@phan",
+            "@cs",
+            "@teste"
+        ]
+    },
+    "scripts-descriptions": {
+        "check": "Roda as verificações do código. PHAN, PHPCS e PHPUNIT"
+    }
+}
