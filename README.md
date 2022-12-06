@@ -1,2 +1,2 @@
 # estudo-composer-buscador-de-cursos
-Projeto orientado por um curos de composer do Alura
+Projeto orientado por um curso de composer da plataforma Alura
